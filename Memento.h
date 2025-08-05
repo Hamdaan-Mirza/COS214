@@ -2,7 +2,6 @@
 #define MEMENTO_H
 
 #include "Shape.h"
-#include <string>
 
 class Memento
 {

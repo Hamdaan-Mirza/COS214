@@ -3,7 +3,6 @@
 
 #include "Shape.h"
 #include "Memento.h"
-#include <string>
 
 class Canvas
 {

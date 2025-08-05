@@ -5,10 +5,10 @@
 
 class SquareFactory : public ShapeFactory {
     public:
+        SquareFactory();
+        ~SquareFactory();
         Shape* createShape() override;
         void toString() override;
-        SquareFactory();
-        virtual ~SquareFactory();
 };
 
 #endif 
