@@ -1,3 +1,4 @@
+
 #ifndef TEXTBOXFACTORY_H
 #define TEXTBOXFACTORY_H
 
@@ -6,9 +7,10 @@
 
 class TextboxFactory : public ShapeFactory {
     public:
-        TextboxFactory();
-        ~TextboxFactory();
         Shape* createShape() override;
         void toString() override;
+        TextboxFactory();
+        ~TextboxFactory();
 };
+
 #endif

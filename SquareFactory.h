@@ -1,3 +1,4 @@
+
 #ifndef SQUAREFACTORY_H
 #define SQUAREFACTORY_H
 
@@ -10,5 +11,4 @@ class SquareFactory : public ShapeFactory {
         Shape* createShape() override;
         void toString() override;
 };
-
 #endif 
