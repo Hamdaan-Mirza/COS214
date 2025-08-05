@@ -1,3 +1,4 @@
+
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
@@ -10,6 +11,7 @@ class Rectangle : public Shape
     public:
         Rectangle();
         Rectangle(int l, int w, string c, int px, int py);
-        Shape* clone();
+        Shape* clone() override;
 };
+
 #endif

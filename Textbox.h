@@ -1,3 +1,4 @@
+
 #ifndef TEXTBOX_H
 #define TEXTBOX_H
 
@@ -14,4 +15,5 @@ class Textbox : public Shape
     private:
         string text;
 };
+
 #endif

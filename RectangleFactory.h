@@ -1,3 +1,4 @@
+
 #ifndef RECTANGLE_FACTORY_H
 #define RECTANGLE_FACTORY_H
 
