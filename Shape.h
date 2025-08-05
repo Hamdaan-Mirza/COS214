@@ -1,7 +1,12 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+#include <iostream>
+#include <vector>
 #include <string>
+#include <map>
+#include <list>
+#include <fstream>
 
 using namespace std;
 

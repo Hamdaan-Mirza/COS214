@@ -2,14 +2,12 @@
 #define TEXTBOX_H
 
 #include "Shape.h"
-#include <string>
-
 
 class Textbox : public Shape
 {
     public:
         Textbox(int l, int w, string c, int px, int py, string t);
-        Shape* clone();
+        Shape* clone() override;
     private:
         string text;
 };

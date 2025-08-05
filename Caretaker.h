@@ -2,7 +2,6 @@
 #define CARETAKER_H
 
 #include "Memento.h"
-#include <string>
 
 class Caretaker
 {
