@@ -8,6 +8,7 @@
 class Rectangle : public Shape
 {
     public:
+        Rectangle();
         Rectangle(int l, int w, string c, int px, int py);
         Shape* clone();
 };

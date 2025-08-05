@@ -2,6 +2,7 @@
 #define SQUAREFACTORY_H
 
 #include "ShapeFactory.h"
+#include "Shape.h"
 
 class SquareFactory : public ShapeFactory {
     public:

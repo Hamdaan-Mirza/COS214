@@ -8,6 +8,7 @@
 class Textbox : public Shape
 {
     public:
+        Textbox();
         Textbox(int l, int w, string c, int px, int py, string t);
         Shape* clone();
     private:

@@ -8,6 +8,7 @@
 class Square : public Shape
 {
     public:
+        Square();
         Square(int l, int w, string c, int px, int py);
         Shape* clone();
 };
