@@ -2,7 +2,7 @@
 #include "Rectangle.h"
 
 Shape* RectangleFactory::createShape() {
-    return new Rectangle();
+    return new Rectangle(2, 1, "black", 0, 0);
 }
 
 void RectangleFactory::toString() {
