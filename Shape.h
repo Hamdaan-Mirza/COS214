@@ -14,7 +14,7 @@ using namespace std;
 class Shape
 {
     public:
-        Shape()
+        Shape();
         Shape(int l, int w, string c, int px, int py);
         virtual Shape* clone() = 0;
 

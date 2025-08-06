@@ -7,13 +7,13 @@ class ExportCanvas
 {
     public:
         ExportCanvas();
-        ~ExportCanvas();
+        virtual ~ExportCanvas();
         void exportToFile();
 
     private:    
         Canvas* canvas;
-        void prepareCanvas();
-        void renderElements();
+        virtual void prepareCanvas() = 0;
+        virtual void renderElements() = 0;
         virtual void saveToFile() = 0;
 };
 #endif

@@ -10,6 +10,8 @@ class PNGExporter : public ExportCanvas
         ~PNGExporter();
 
     private:    
+        void prepareCanvas() override;
+        void renderElements() override;
         void saveToFile() override;
 };
 #endif

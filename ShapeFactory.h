@@ -1,4 +1,3 @@
-
 #ifndef SHAPEFACTORY_H
 #define SHAPEFACTORY_H
 
@@ -19,3 +18,4 @@ class ShapeFactory {
         ShapeFactory();
         virtual ~ShapeFactory();
 };
+#endif
