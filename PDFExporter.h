@@ -10,6 +10,8 @@ class PDFExporter : public ExportCanvas
         ~PDFExporter();
 
     private:    
+        void prepareCanvas() override;
+        void renderElements() override;
         void saveToFile() override;
 };
 #endif

@@ -8,5 +8,4 @@ class ShapeFactory {
         virtual Shape* createShape() = 0;
         virtual void toString() = 0;
 };
-
 #endif
