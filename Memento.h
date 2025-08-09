@@ -6,10 +6,10 @@
 class Memento
 {
     public:
-        Memento(Shape* elements);
-        Shape* getShapes();
+        Memento(vector<unique_ptr<Shape>> elements);
+        vector<unique_ptr<Shape>> getShapes();
 
     private:    
-        Shape* shapes;
+        vector<unique_ptr<Shape>> shapes;
 };
 #endif

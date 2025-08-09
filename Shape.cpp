@@ -1,5 +1,12 @@
-#include <iostream>
 #include "Shape.h"
+
+Shape::Shape(){
+    length = 0;
+    width = 0;
+    color = "black";
+    position_x = 0;
+    position_y = 0;
+}
 
 Shape::Shape(int l, int w, string c, int px, int py){
     length = l;
@@ -8,3 +15,4 @@ Shape::Shape(int l, int w, string c, int px, int py){
     position_x = px;
     position_y = py;
 }
+
