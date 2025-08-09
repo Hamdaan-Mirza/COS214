@@ -8,11 +8,12 @@ class Canvas
 {
     public:
         Canvas();
-        ~Canvas();
+        void addShape(unique_ptr<Shape> shape);
         Memento* captureCurrent();
         void undoAction(Memento* prev);
+        void redoAction(Memento* next);
 
     private:    
-        Shape* shapes;
+        vector<unique_ptr<Shape>> shapes;
 };
 #endif
