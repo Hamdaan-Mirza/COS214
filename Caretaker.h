@@ -3,14 +3,16 @@
 
 #include "Memento.h"
 
-class Caretaker
+class CareTaker
 {
     public:
-        Caretaker();
-        Memento* getMemento();
-        void setMemento(Memento* other);
+        CareTaker();
+        Memento* getPrev();
+        Memento* getNext();
+        void storeMemento(unique_ptr<Memento> memento);
 
     private:    
-        Memento* memento;
+        list<unique_ptr<Memento>> mementos;
+        list<unique_ptr<Memento>>::iterator curr;      
 };
 #endif
