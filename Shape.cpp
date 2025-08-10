@@ -16,3 +16,23 @@ Shape::Shape(int l, int w, string c, int px, int py){
     position_y = py;
 }
 
+int Shape::getLength() const {
+    return length;
+}
+
+int Shape::getWidth() const {
+    return width;
+}
+
+string Shape::getColor() const {
+    return color;
+}
+
+int Shape::getPosX() const {
+    return position_x;
+}
+
+int Shape::getPosY() const {
+    return position_y;
+}
+

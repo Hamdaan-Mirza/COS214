@@ -16,6 +16,11 @@ public:
     Shape();
     Shape(int l, int w, string c, int px, int py);
     virtual Shape *clone() = 0;
+    int getLength() const;
+    int getWidth() const;
+    string getColor() const;
+    int getPosX() const;
+    int getPosY() const; 
 
 private:
     int length;

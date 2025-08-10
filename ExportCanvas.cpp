@@ -13,3 +13,7 @@ void ExportCanvas::exportToFile() {
         saveToFile();
     }
 }
+
+Canvas* ExportCanvas::getCanvas() const {
+    return canvas;
+}

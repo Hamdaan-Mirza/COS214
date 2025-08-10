@@ -5,14 +5,17 @@ PNGExporter::PNGExporter() : ExportCanvas() {}
 PNGExporter::~PNGExporter() {}
 
 void PNGExporter::prepareCanvas() {
-    if (!canvas) return;
-    canvas->setDimensions(60, 60);
+    Canvas* curr = getCanvas();
+    if (!curr) return;
+    curr->setDimensions(60, 60);
 }
 
 void PNGExporter::renderElements() {
-    if (!canvas) return;
-    for (int i = 0; i < canvas->shapes.size(); i++) {
-        canvas->addShape(make_unique<Shape>(*shape));
+    Canvas* curr = getCanvas();
+    if (!curr) return;
+    std::vector<Shape*> temp = curr->getShapes();
+    for (int i = 0; i < temp.size(); i++) {
+        curr->addShape(new Shape(*temp[i]));
     }
 }
 

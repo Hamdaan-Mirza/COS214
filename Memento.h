@@ -6,10 +6,12 @@
 class Memento
 {
     public:
-        Memento(vector<unique_ptr<Shape>> elements);
-        vector<unique_ptr<Shape>> getShapes();
+        Memento();
+        ~Memento();
+        Memento(const std::vector<Shape*>& elements);
+        std::vector<Shape*> getShapes();
 
     private:    
-        vector<unique_ptr<Shape>> shapes;
+        std::vector<Shape*> shapes;
 };
 #endif

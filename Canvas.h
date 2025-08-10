@@ -10,13 +10,17 @@ class Canvas
         Canvas();
         ~Canvas();
         void setDimensions(int width, int height);
-        void addShape(unique_ptr<Shape> shape);
+        void addShape(Shape* shape);
         Memento* captureCurrent();
         void undoAction(Memento* prev);
         void redoAction(Memento* next);
+        // void addShapes(const std::vector<Shape*>& newShapes);
+        int getHeight() const;
+        int getWidth() const;
+        const std::vector<Shape*>& getShapes() const;
 
     private:    
-        vector<unique_ptr<Shape>> shapes;
+        std::vector<Shape*> shapes;
         int height;
         int width;
 };

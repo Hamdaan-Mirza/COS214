@@ -1,5 +1,5 @@
-#ifndef PNGEXPORTER_H
-#define PNGEXPORTER_H
+#ifndef PNG_EXPORTER_H
+#define PNG_EXPORTER_H
 
 #include "ExportCanvas.h"
 
