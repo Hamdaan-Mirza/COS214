@@ -7,7 +7,6 @@
 class Canvas
 {
     public:
-        Canvas();
         void addShape(unique_ptr<Shape> shape);
         Memento* captureCurrent();
         void undoAction(Memento* prev);
