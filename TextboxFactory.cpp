@@ -3,7 +3,9 @@
 
 Shape *TextboxFactory::createShape()
 {
-    return new Textbox(2, 1, "black", 0, 0, "...");
+    Shape* textbox = new Textbox(2, 1, "black", 1, 2, "Some text here");
+    textbox->setName("Textbox");
+    return textbox;
 }
 
 void TextboxFactory::toString()

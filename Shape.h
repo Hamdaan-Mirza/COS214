@@ -16,6 +16,18 @@ public:
     Shape();
     Shape(int l, int w, string c, int px, int py);
     virtual Shape *clone() = 0;
+    int getLength() const;
+    int getWidth() const;
+    string getColor() const;
+    int getPosX() const;
+    int getPosY() const; 
+    void setLength(int l);
+    void setWidth(int w);
+    void setColor(const string &c);
+    void setPosX(int px);
+    void setPosY(int py);
+    virtual void setName(const std::string &name) = 0;
+    virtual std::string getName() const = 0;
 
 private:
     int length;

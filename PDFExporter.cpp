@@ -5,14 +5,20 @@ PDFExporter::PDFExporter() : ExportCanvas() {}
 PDFExporter::~PDFExporter() {}
 
 void PDFExporter::prepareCanvas() {
-    if (!canvas) return;
-    canvas->setDimensions(60, 60);
+    Canvas* curr = getCanvas();
+    if (!curr) return;
+    curr->setDimensions(60, 60);
+    std::cout << "Preparing canvas for PDF export..." << std::endl;
 }
 
 void PDFExporter::renderElements() {
-    if (!canvas) return;
-    for (int i = 0; i < canvas->shapes.size(); i++) {
-        canvas->addShape(make_unique<Shape>(*canvas->shapes[i]));
+    Canvas* curr = getCanvas();
+    if (!curr) return;
+    std::vector<Shape*> temp = curr->getShapes();
+    for (int i = 0; i < temp.size(); i++) {
+        curr->addShape(temp[i]->clone());
+        std::cout << "Rendering shape at position (" << temp[i]->getPosX() << ", " << temp[i]->getPosY() << ") with color " 
+        << temp[i]->getColor() << "." << std::endl;
     }
 }
 

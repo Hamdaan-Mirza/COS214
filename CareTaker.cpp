@@ -5,6 +5,15 @@ CareTaker::CareTaker()
     curr = mementos.end();
 }
 
+CareTaker::~CareTaker()
+{
+    for (auto i = mementos.begin(); i != mementos.end(); i++)
+    {
+        delete *i; 
+    }
+    mementos.clear();
+}
+
 Memento *CareTaker::getPrev()
 {
     if (mementos.empty() || curr == mementos.begin())
@@ -15,7 +24,7 @@ Memento *CareTaker::getPrev()
     {
         curr--;
     }
-    return curr->get();
+    return *curr;
 }
 
 Memento *CareTaker::getNext()
@@ -28,10 +37,10 @@ Memento *CareTaker::getNext()
     {
         curr++;
     }
-    return curr->get();
+    return *curr;
 }
 
-void CareTaker::storeMemento(unique_ptr<Memento> memento)
+void CareTaker::storeMemento(Memento* memento)
 {
     if (!mementos.empty())
     {

@@ -1,9 +1,19 @@
 #include "Memento.h"
 
-Memento::Memento(vector<unique_ptr<Shape>> elements){
-    shapes = elements;
+
+Memento::Memento() {}
+
+Memento::~Memento() {
+    // for (auto& shape : shapes) {
+    //     delete shape;  
+    // }
+    // shapes.clear();
 }
 
-vector<unique_ptr<Shape>> Memento::getShapes(){
+std::vector<Shape*> Memento::getShapes() {
     return shapes;
+}
+
+Memento::Memento(const std::vector<Shape*>& elements){
+    shapes = elements;
 }

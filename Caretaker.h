@@ -2,17 +2,19 @@
 #define CARETAKER_H
 
 #include "Memento.h"
+#include <list>
 
 class CareTaker
 {
     public:
         CareTaker();
+        ~CareTaker();
         Memento* getPrev();
         Memento* getNext();
-        void storeMemento(unique_ptr<Memento> memento);
+        void storeMemento(Memento* memento);
 
-    private:    
-        list<unique_ptr<Memento>> mementos;
-        list<unique_ptr<Memento>>::iterator curr;      
+    private:
+        std::list<Memento*> mementos;
+        std::list<Memento*>::iterator curr;
 };
 #endif

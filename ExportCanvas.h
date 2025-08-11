@@ -1,5 +1,5 @@
-#ifndef EXPORTCANVAS_H
-#define EXPORTCANVAS_H
+#ifndef EXPORT_CANVAS_H
+#define EXPORT_CANVAS_H
 
 #include "Canvas.h"
 
@@ -9,11 +9,12 @@ class ExportCanvas
         ExportCanvas();
         virtual ~ExportCanvas();
         void exportToFile();
-
-    private:    
-        Canvas* canvas;
         virtual void prepareCanvas() = 0;
         virtual void renderElements() = 0;
         virtual void saveToFile() = 0;
+        Canvas* getCanvas() const;
+        void setCanvas(Canvas* canvas);
+    private:    
+        Canvas* canvas; 
 };
 #endif

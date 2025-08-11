@@ -2,7 +2,9 @@
 #include "Square.h"
 
 Shape* SquareFactory::createShape() {
-    return new Square(2, 2, "black", 0, 0);
+    Shape* shape = new Square(2, 2, "black", 0, 0);
+    shape->setName("Square");
+    return shape;
 }
 
 void SquareFactory::toString() {
