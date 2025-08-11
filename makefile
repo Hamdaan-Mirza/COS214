@@ -1,4 +1,3 @@
-# Simple Makefile for compiling all .cpp files in the directory
 
 all: TestingMain
 
