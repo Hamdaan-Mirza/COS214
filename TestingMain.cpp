@@ -7,6 +7,7 @@
 #include "SquareFactory.h"
 #include "PNGExporter.h"
 #include "PDFExporter.h"
+#include "TextboxFactory.h"
 
 // ...existing code...
 
@@ -74,10 +75,10 @@ void tests() {
     // Clean up
     // delete rect;
     // delete square;
-    // // delete textbox;
-    // delete rectClone;
-    // delete squareClone;
-    // delete textboxClone;
+    delete textbox;
+    delete rectClone;
+    delete squareClone;
+    delete textboxClone;
     // Memento may need deletion depending on ownership
 }
 
