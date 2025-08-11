@@ -15,8 +15,8 @@ void tests() {
     RectangleFactory rectFactory;
     SquareFactory squareFactory;
 
-    Shape* shape1 = rectFactory.createShape();   // Adjust arguments if needed
-    Shape* shape2 = squareFactory.createShape(); // Adjust arguments if needed
+    Shape* shape1 = rectFactory.createShape();   
+    Shape* shape2 = squareFactory.createShape();
 
     canvas.addShape(shape1);
     canvas.addShape(shape2);
@@ -31,7 +31,7 @@ void tests() {
     pngExporter.exportToFile();
 
     PDFExporter pdfExporter;
-    pdfExporter.setCanvas(&canvas); // If not available, assign via constructor or skip
+    pdfExporter.setCanvas(&canvas);
     pdfExporter.exportToFile();
 
     
