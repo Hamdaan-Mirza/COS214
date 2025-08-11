@@ -9,12 +9,12 @@ class ExportCanvas
         ExportCanvas();
         virtual ~ExportCanvas();
         void exportToFile();
-        virtual void prepareCanvas() = 0;
-        virtual void renderElements() = 0;
-        virtual void saveToFile() = 0;
         Canvas* getCanvas() const;
         void setCanvas(Canvas* canvas);
     private:    
         Canvas* canvas; 
+        virtual void prepareCanvas() = 0;
+        virtual void renderElements() = 0;
+        virtual void saveToFile() = 0;
 };
 #endif
