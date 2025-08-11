@@ -8,3 +8,13 @@ Shape *Square::clone()
 {
     return new Square(*this);
 }
+
+std::string Square::getName() const
+{
+    return name;
+}
+
+void Square::setName(const std::string &name)
+{
+    this->name = name;
+}

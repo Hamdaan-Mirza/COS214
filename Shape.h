@@ -26,6 +26,8 @@ public:
     void setColor(const string &c);
     void setPosX(int px);
     void setPosY(int py);
+    virtual void setName(const std::string &name) = 0;
+    virtual std::string getName() const = 0;
 
 private:
     int length;

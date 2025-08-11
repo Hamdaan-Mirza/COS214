@@ -9,3 +9,13 @@ Shape *Textbox::clone()
 {
     return new Textbox(*this);
 }
+
+std::string Textbox::getName() const
+{
+    return name;
+}
+
+void Textbox::setName(const std::string &name)
+{
+    this->name = name;
+}
