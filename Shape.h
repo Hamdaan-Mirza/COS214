@@ -21,6 +21,11 @@ public:
     string getColor() const;
     int getPosX() const;
     int getPosY() const; 
+    void setLength(int l);
+    void setWidth(int w);
+    void setColor(const string &c);
+    void setPosX(int px);
+    void setPosY(int py);
 
 private:
     int length;

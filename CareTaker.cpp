@@ -7,9 +7,9 @@ CareTaker::CareTaker()
 
 CareTaker::~CareTaker()
 {
-    for (int i = 0; i < mementos.size(); i++)
+    for (auto i = mementos.begin(); i != mementos.end(); i++)
     {
-        delete memento; 
+        delete *i; 
     }
     mementos.clear();
 }
@@ -24,7 +24,7 @@ Memento *CareTaker::getPrev()
     {
         curr--;
     }
-    return curr->get();
+    return *curr;
 }
 
 Memento *CareTaker::getNext()
@@ -37,7 +37,7 @@ Memento *CareTaker::getNext()
     {
         curr++;
     }
-    return curr->get();
+    return *curr;
 }
 
 void CareTaker::storeMemento(Memento* memento)

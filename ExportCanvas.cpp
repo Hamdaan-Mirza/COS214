@@ -3,7 +3,7 @@
 ExportCanvas::ExportCanvas() : canvas(nullptr) {}
 
 ExportCanvas::~ExportCanvas() {
-    delete canvas;
+    // delete canvas;
 }
 
 void ExportCanvas::exportToFile() {
@@ -16,4 +16,8 @@ void ExportCanvas::exportToFile() {
 
 Canvas* ExportCanvas::getCanvas() const {
     return canvas;
+}
+
+void ExportCanvas::setCanvas(Canvas* canvas) {
+    this->canvas = canvas;
 }

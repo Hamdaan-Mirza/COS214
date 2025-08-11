@@ -15,7 +15,7 @@ void PNGExporter::renderElements() {
     if (!curr) return;
     std::vector<Shape*> temp = curr->getShapes();
     for (int i = 0; i < temp.size(); i++) {
-        curr->addShape(new Shape(*temp[i]));
+        curr->addShape(temp[i]->clone()); 
     }
 }
 

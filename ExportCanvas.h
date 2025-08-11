@@ -13,6 +13,7 @@ class ExportCanvas
         virtual void renderElements() = 0;
         virtual void saveToFile() = 0;
         Canvas* getCanvas() const;
+        void setCanvas(Canvas* canvas);
     private:    
         Canvas* canvas; 
 };
