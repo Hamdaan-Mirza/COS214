@@ -6,7 +6,7 @@
 class Dogorithm : public ChatRoom {
     public:
         Dogorithm();
-        ~Dogorithm() override;
+        virtual ~Dogorithm() override;
         void registerUser(User* user) override;
         void removeUser(User* user) override;
         void sendMessage(std::string message, User  *fromUser) override;

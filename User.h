@@ -22,7 +22,10 @@ class User {
         virtual void receive(std::string message, User* fromUser, ChatRoom* chatRoom);
         virtual void addCommand(Command* command);
         virtual void executeAll();
-        std::string getName() const;
+        std::string getName();
+        Command* getCommandQueue();
+        std::vector<ChatRoom*> getChatRooms();
+        void setCommandQueue(Command* commandQueue);
 };
 
 #endif

@@ -22,6 +22,8 @@ class ChatRoom {
         virtual void saveMessage(std::string message, User *fromUser) = 0;
         std::vector<std::string*> getChatHistory();
         std::vector<User*> getUsers();
+        std::vector<User*> setUsers(std::vector<User*> users);
+        std::vector<std::string*> setChatHistory(std::vector<std::string*> chatHistory);
 };
 
 #endif
