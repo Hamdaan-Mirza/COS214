@@ -1,7 +1,9 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
+#include "Iterator.h"
 #include "ChatRoomIterator.h"
+#include "Subject.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,12 +12,8 @@
 
 class User;
 
-class ChatRoom
+class ChatRoom : public Subject
 {
-private:
-    std::vector<User *> users;
-    std::vector<std::string *> chatHistory;
-
 public:
     ChatRoom();
     virtual ~ChatRoom();
@@ -29,6 +27,9 @@ public:
     std::vector<User *> getUsers();
     std::vector<User *> setUsers(std::vector<User *> users);
     std::vector<std::string *> setChatHistory(std::vector<std::string *> chatHistory);
+private:
+    std::vector<User *> users;
+    std::vector<std::string *> chatHistory;
 };
 
 #endif
