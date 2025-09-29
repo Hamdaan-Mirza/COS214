@@ -14,7 +14,7 @@ class User {
     protected:
         std::vector<ChatRoom*> chatRooms;
         std::string name;
-        Command* commandQueue;
+        std::vector<Command*> commandQueue;
     public:
         User(std::string name);
         virtual ~User();
