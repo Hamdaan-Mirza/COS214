@@ -23,10 +23,10 @@ class User {
         virtual void addCommand(Command* command) = 0;
         virtual void executeAll() = 0;
         std::string getName();
-        Command* getCommandQueue();
+        std::vector<Command*> getCommandQueue();
         std::vector<ChatRoom*> getChatRooms();
         void setChatRooms(std::vector<ChatRoom*> chatRooms);
-        void setCommandQueue(Command* commandQueue);
+        void setCommandQueue(std::vector<Command*> commandQueue);
 };
 
 #endif
