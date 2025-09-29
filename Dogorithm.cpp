@@ -10,6 +10,10 @@ void Dogorithm::registerUser(User* user) {
     std::vector<User*> users = getUsers();
     users.push_back(user);
     setUsers(users);
+    std::vector<ChatRoom*> chatRooms = user->getChatRooms();
+    chatRooms.push_back(this);
+    user->setChatRooms(chatRooms);
+    notify("user_joined", this);
 }
 
 void Dogorithm::removeUser(User* user) {
@@ -17,6 +21,7 @@ void Dogorithm::removeUser(User* user) {
     for(int i = 0; i < users.size(); i++) {
         if(users[i] == user) {
             users.erase(users.begin() + i);
+            notify("user_left", this);
             break;
         }
     }
@@ -27,6 +32,7 @@ void Dogorithm::sendMessage(std::string message, User *fromUser) {
     std::vector<User*> users = getUsers();
     for(int i = 0; i < users.size(); i++) users[i]->receive(message, fromUser, this);
     saveMessage(message, fromUser);
+    notify("message_sent", this);
 }
 
 void Dogorithm::saveMessage(std::string message, User *fromUser) {

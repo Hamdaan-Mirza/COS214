@@ -18,13 +18,14 @@ class User {
     public:
         User(std::string name);
         virtual ~User();
-        virtual void send(std::string message, ChatRoom* chatRoom);
-        virtual void receive(std::string message, User* fromUser, ChatRoom* chatRoom);
-        virtual void addCommand(Command* command);
-        virtual void executeAll();
+        virtual void send(std::string message, ChatRoom* chatRoom) = 0;
+        virtual void receive(std::string message, User* fromUser, ChatRoom* chatRoom) = 0;
+        virtual void addCommand(Command* command) = 0;
+        virtual void executeAll() = 0;
         std::string getName();
         Command* getCommandQueue();
         std::vector<ChatRoom*> getChatRooms();
+        void setChatRooms(std::vector<ChatRoom*> chatRooms);
         void setCommandQueue(Command* commandQueue);
 };
 

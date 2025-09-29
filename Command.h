@@ -10,7 +10,6 @@
 class ChatRoom;
 class User;
 
-
 class Command {
     protected:
         ChatRoom* room;
