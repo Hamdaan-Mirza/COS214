@@ -10,6 +10,9 @@ void Dogorithm::registerUser(User* user) {
     std::vector<User*> users = getUsers();
     users.push_back(user);
     setUsers(users);
+    std::vector<ChatRoom*> chatRooms = user->getChatRooms();
+    chatRooms.push_back(this);
+    user->setChatRooms(chatRooms);
 }
 
 void Dogorithm::removeUser(User* user) {
