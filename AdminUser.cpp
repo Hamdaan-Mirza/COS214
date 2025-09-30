@@ -2,6 +2,14 @@
 #include "ChatRoom.h"
 #include "Command.h"
 
+/**
+ * @file AdminUser.cpp
+ * @brief It implements the AdminUser class and its functions for sending messages,receiving messages, adding commands and executing all.
+ * @details It implements the Invoker role in the Command pattern. It is part of both chatrooms.
+ * @author Hamdaan Mirza - u24631494
+ * @date 29-09-2025
+ */
+
 AdminUser::AdminUser(std::string name) : User(name) {}
 
 AdminUser::~AdminUser() {}

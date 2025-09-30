@@ -13,6 +13,12 @@
 #include "Observer.h"
 #include <iostream>
 
+/**
+ * @author Hamdaan Mirza - u24631494 and Abdelrahman - u24898008
+ * @brief Main function to test the chat application.
+ * @return int
+ * @date 30-09-2025
+ */
 int main() {
 
     std::cout << "====================================="<<std::endl;

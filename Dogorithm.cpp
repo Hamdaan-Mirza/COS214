@@ -2,6 +2,14 @@
 #include "ChatRoom.h"
 #include "User.h"
 
+/**
+ * @file Dogorithm.cpp
+ * @brief It implements the Dogorithm class and its functions for registering users, removing users, sending messages and saving messages.
+ * @details It implements the Concrete Mediator role in the Mediator pattern.
+ * @author Hamdaan Mirza - u24631494
+ * @date 30-09-2025
+ */
+
 Dogorithm::Dogorithm() {}
 
 Dogorithm::~Dogorithm() {}

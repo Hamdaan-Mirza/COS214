@@ -2,6 +2,14 @@
 #include "ChatRoom.h"
 #include "Command.h"
 
+/**
+ * @file CatUser.cpp
+ * @brief It implements the CatUser class and its functions for sending messages,receiving messages, adding commands and executing all.
+ * @details It implements the Invoker role in the Command pattern. It is part of CtrlCat chatroom.
+ * @author Hamdaan Mirza - u24631494
+ * @date 29-09-2025
+ */
+
 CatUser::CatUser(std::string name) : User(name) {}
 
 CatUser::~CatUser() {}

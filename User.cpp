@@ -1,6 +1,14 @@
 #include "User.h"
 #include "Command.h"
 
+/**
+ * @file User.cpp
+ * @brief It implements the User class and its getter and setter functions, as well as constructor and destructor. It is an abstract class
+ * @details It implements the Invoker role in the Command pattern.
+ * @author Hamdaan Mirza - u24631494
+ * @date 30-09-2025
+ */
+
 User::User(std::string name) : name(name) {}
 
 User::~User() {

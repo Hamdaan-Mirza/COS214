@@ -2,6 +2,14 @@
 #include "ChatRoom.h"
 #include "Command.h"
 
+/**
+ * @file DogUser.cpp
+ * @brief It implements the DogUser class and its functions for sending messages,receiving messages, adding commands and executing all.
+ * @details It implements the Invoker role in the Command pattern. It is part of Dogorithm chatroom.
+ * @author Hamdaan Mirza - u24631494
+ * @date 29-09-2025
+ */
+
 DogUser::DogUser(std::string name) : User(name) {}
 
 DogUser::~DogUser() {}
