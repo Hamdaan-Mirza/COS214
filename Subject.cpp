@@ -1,5 +1,12 @@
     #include "Subject.h"
 
+    /**
+     * @file Subject.cpp
+     * @author Abdelrahman - u24898008
+     * @brief It implements the Subject class with its attributes and functions.
+     * @date 30-09-2025
+     */
+
     Subject::~Subject() {
         observers.clear();
     }
@@ -17,7 +24,7 @@
         }
     }
 
-    void Subject::notify(const std::string& eventType, void* data = nullptr) {
+    void Subject::notify(const std::string& eventType, void* data) {
         for (auto observer : observers) {
             observer->update(eventType, data);
         }

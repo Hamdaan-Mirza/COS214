@@ -1,6 +1,14 @@
 #include "ChatRoom.h"
 #include "User.h"
 
+/**
+ * @file ChatRoom.cpp
+ * @brief It implements the ChatRoom class and its getter and setter functions, as well as constructor and destructor. It is an abstract class
+ * @details It implements the Mediator role in the Mediator pattern. 
+ * @author Hamdaan Mirza - u24631494
+ * @date 30-09-2025
+ */
+
 ChatRoom::ChatRoom() {}
 
 ChatRoom::~ChatRoom()
@@ -10,7 +18,7 @@ ChatRoom::~ChatRoom()
         delete chatHistory[i];
     }
     chatHistory.clear();
-    users.clear();
+    // users.clear();
 }
 
 Iterator<User *> *ChatRoom::createUserIterator()
