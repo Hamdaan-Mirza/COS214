@@ -8,8 +8,8 @@ AdminUser::~AdminUser() {}
 
 void AdminUser::send(std::string message, ChatRoom* chatRoom) {
     if(!chatRoom) return;
-    std::cout << "Admin " << name << " sends message: " << message << " to chat room." << std::endl;
-    chatRoom->sendMessage(message, this);
+    std::cout << "Admin " << name << " sends message:- " << message << " -to chat room." << std::endl;
+    // chatRoom->sendMessage(message, this);
 
     addCommand(new SendMessageCommand(chatRoom, this, message));
     addCommand(new LogMessageCommand(chatRoom, this, message));

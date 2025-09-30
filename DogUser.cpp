@@ -9,7 +9,7 @@ DogUser::~DogUser() {}
 void DogUser::send(std::string message, ChatRoom* chatRoom) {
     if(!chatRoom) return;
     std::cout << "Dog " << name << " sends message: " << message << " to chat room." << std::endl;
-    chatRoom->sendMessage(message, this);
+    // chatRoom->sendMessage(message, this);
 
     addCommand(new SendMessageCommand(chatRoom, this, message));
     addCommand(new LogMessageCommand(chatRoom, this, message));

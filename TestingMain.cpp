@@ -47,10 +47,14 @@ int main() {
     catRoom->removeUser(cat1);
     dogRoom->removeUser(dog1);
 
+    delete cat1;
+    delete dog1;
+    delete admin1;
     delete catRoom;
     delete dogRoom;
     
     std::cout << "====================================="<<std::endl;
+    std::cout << "Testing Mediator Completed"<<std::endl;
     std::cout << "Testing Command"<<std::endl;
     std::cout << "====================================="<<std::endl;
     CtrlCat* catRoom2 = new CtrlCat();
@@ -60,12 +64,23 @@ int main() {
     DogUser* dog2 = new DogUser("User4");
     AdminUser* admin2 = new AdminUser("Admin2");
 
+    catRoom2->registerUser(cat2);
+    catRoom2->registerUser(admin2);
+    dogRoom2->registerUser(dog2);
+    dogRoom2->registerUser(admin2);
+
     admin2->send("Admin speaking", catRoom2);
     cat2->send("Love cats", catRoom2);
     
     for(int i = 0; i < catRoom2->getChatHistory().size(); i++) {
         std::cout << *catRoom2->getChatHistory()[i] << std::endl;
     }
+
+    admin2->addCommand(new SendMessageCommand(catRoom2, admin2, "Manual Send: Hello!"));
+    admin2->addCommand(new LogMessageCommand(catRoom2, admin2, "Manual Save: Hello!"));
+
+    std::cout << "Commands added to admin's queue but not executed yet.\n";
+    admin2->executeAll();
 
     delete catRoom2;
     delete dogRoom2;

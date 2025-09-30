@@ -7,10 +7,8 @@
 template <typename T>
 class ChatRoomIterator : public Iterator<T> {
     public:
-    ChatRoomIterator(const std::vector<T>& coll)  {
-        collection = coll;
-        currentPosition = 0;
-    }
+    ChatRoomIterator(const std::vector<T>& coll) : collection(coll), currentPosition(0) {}
+    
     void first() override {
         currentPosition = 0;
     }
@@ -30,7 +28,7 @@ class ChatRoomIterator : public Iterator<T> {
     }
 private:
     const std::vector<T>& collection;
-    size_t currentPosition;
+    int currentPosition;
 };
 
 #endif

@@ -8,8 +8,8 @@ Command::Command(ChatRoom* room, User* fromUser, std::string message)
     : room(room), fromUser(fromUser), message(message) {}
 
 Command::~Command() {
-    delete room;
-    delete fromUser;
+    // delete room;
+    // delete fromUser;
 }
 
 std::string Command::getMessage() { return message; }

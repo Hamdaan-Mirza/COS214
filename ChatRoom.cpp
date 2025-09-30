@@ -10,7 +10,7 @@ ChatRoom::~ChatRoom()
         delete chatHistory[i];
     }
     chatHistory.clear();
-    users.clear();
+    // users.clear();
 }
 
 Iterator<User *> *ChatRoom::createUserIterator()

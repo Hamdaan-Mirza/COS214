@@ -17,7 +17,7 @@
         }
     }
 
-    void Subject::notify(const std::string& eventType, void* data = nullptr) {
+    void Subject::notify(const std::string& eventType, void* data) {
         for (auto observer : observers) {
             observer->update(eventType, data);
         }

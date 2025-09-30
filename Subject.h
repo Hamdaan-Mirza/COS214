@@ -12,7 +12,7 @@ public:
     virtual ~Subject();
     virtual void attach(Observer *observer);
     virtual void detach(Observer *observer);
-    virtual void notify(const std::string &event, void *data = nullptr);
+    virtual void notify(const std::string &event, void *data);
 
 private:
     std::vector<Observer *> observers;
